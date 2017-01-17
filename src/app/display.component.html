@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<div class="panel-title">
+			{{listTitle()}}
+			{{listCount()}}
+
+			<button class="btn btn-info invisible hidden-button">&nbsp;</button> <!-- Cheesy alignment fix -->
+			<button (click)="toggleFilter()" class="btn btn-info pull-right">
+				<span class="glyphicon {{buttonIcon()}}" aria-hidden="true"></span>&nbsp;
+				{{buttonText()}}
+			</button>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div *ngFor="let entry of sourceList | paginate: { itemsPerPage: 20, currentPage: page }" [ngClass]="getEntryClass(entry)">
+			{{entry}}
+		</div>
+	</div>
+
+	<div class="panel-footer">
+		<pagination-controls (pageChange)="page = $event" autoHide="true"></pagination-controls>
+	</div>
+
+</div>	<!-- Panel -->
+
+<div class="text-muted">Time to remove duplicate entries: {{speed}}ms</div>

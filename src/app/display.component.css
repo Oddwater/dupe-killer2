@@ -1,0 +1,8 @@
+.invisible {
+	visibility: hidden;
+}
+
+.hidden-button {
+	width: 1px;
+	padding: 6px 0;
+}
