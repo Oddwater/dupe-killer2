@@ -1,31 +1,25 @@
 # DupeKiller2
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
+## Demo
+https://oddwater.github.io/dupe-killer2
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Browser Compatibility
+This was tested on Chrome, Edge, an Android tablet, and an Android phone. It is likely that it works on other major browsers as well.
 
-## Code scaffolding
+## Source Code
+Relevent code is in the src/app directory. The filtering code is in "initListData" in display.component.ts.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Performance
+Upon pressing the Generate button, several things happen. Many random email addresses are created, which takes longer than the duplicate filtering.
 
-## Build
+Performance for the duplicate filtering routine is measured in isolation and displayed at the bottom of the page.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Unit tests
+A very abbreviated unit test suite is in display.component.spec.ts. It only tests duplicate filtering and occurrence counts.
 
-## Running unit tests
+## Original Version
+The first version I did allowed addresses to be pasted in or directly edited. It included routing and several views.
+Performance suffered greatly due to a <textarea>, which starts behaving badly after around 10k entries. It is included
+here for reference only.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+https://oddwater.github.io/dupe-killer
