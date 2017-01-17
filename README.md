@@ -19,7 +19,7 @@ A very abbreviated unit test suite is in display.component.spec.ts. It only test
 
 ## Original Version
 The first version I did allowed addresses to be pasted in or directly edited. It included routing and several views.
-Performance suffered greatly due to a <textarea>, which starts behaving badly after around 10k entries. It is included
+Performance suffered greatly due to a textarea, which starts behaving badly after around 10k entries. It is included
 here for reference only.
 
 https://oddwater.github.io/dupe-killer
