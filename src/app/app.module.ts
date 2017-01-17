@@ -1,20 +1,44 @@
+//==================================================================================================
+// Module Definition
+//==================================================================================================
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 
-import { AppComponent } from './app.component';
+// 3rd Party
+import {Ng2PaginationModule} from 'ng2-pagination';
 
+// App-specific
+import { AppComponent }  from './app.component';
+import { DisplayComponent } from './display.component';
+import { RandomComponent } from './random.component';
+
+import { AddressGeneratorService } from './address-generator.service';
+//import { AddressListService } from './address-list.service';
+
+
+//=================================================
+// Module Configuration
+//=================================================
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    Ng2PaginationModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  declarations: [
+      AppComponent,
+      DisplayComponent,
+      RandomComponent,
+    ],
+
+  providers: [
+    AddressGeneratorService,
+//    AddressListService,
+  ],
+
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

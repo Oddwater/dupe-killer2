@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+a {
+	cursor: pointer;
+	transition: none 86ms ease-out;
+}
+a:hover {
+	text-decoration: none;
+}
+
+.small-margin-bottom {
+	margin-bottom: 8px;
+}
+
+.medium-margin-bottom {
+	margin-bottom: 16px;
+}
+
+/* Prevent panel over-runs */
+.panel-body {
+	overflow: hidden;
+}
+
+/* This doesn't work in context, so we'll reluctantly make it global */
+ul.ng2-pagination {
+	padding-left: 0
+}
